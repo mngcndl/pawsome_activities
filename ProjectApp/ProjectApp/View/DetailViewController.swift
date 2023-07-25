@@ -43,10 +43,19 @@ final class DetailViewController: UIViewController {
     weak var delegate: DetailViewControllerDelegate?
     
     private lazy var activityLabel: UILabel = {
+        guard let customFont = UIFont(name: "REM-Regular", size: UIFont.labelFontSize) else {
+            fatalError("""
+                Failed to load the "REM-Regular" font.
+                Make sure the font file is included in the project and the font name is spelled correctly.
+                """
+            )
+        }
         let activityLabel = UILabel()
         activityLabel.translatesAutoresizingMaskIntoConstraints = false
         activityLabel.textAlignment = .center
         activityLabel.numberOfLines = 0
+        activityLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
+        activityLabel.adjustsFontForContentSizeCategory = true
         return activityLabel
     }()   
     
@@ -58,54 +67,108 @@ final class DetailViewController: UIViewController {
     }()
     
     private lazy var typeHint: UILabel = {
+        guard let customFont = UIFont(name: "REM-Regular", size: UIFont.labelFontSize) else {
+            fatalError("""
+                Failed to load the "REM-Regular" font.
+                Make sure the font file is included in the project and the font name is spelled correctly.
+                """
+            )
+        }
         let typeHint = UILabel()
         typeHint.translatesAutoresizingMaskIntoConstraints = false
         typeHint.text = "Type of activity:"
         typeHint.textColor = .systemGray
         typeHint.textAlignment = .left
         typeHint.numberOfLines = 0
+        typeHint.font = UIFontMetrics.default.scaledFont(for: customFont)
+        typeHint.adjustsFontForContentSizeCategory = true
         return typeHint
     }()
     
     private lazy var participantsHint: UILabel = {
+        guard let customFont = UIFont(name: "REM-Regular", size: UIFont.labelFontSize) else {
+            fatalError("""
+                Failed to load the "REM-Regular" font.
+                Make sure the font file is included in the project and the font name is spelled correctly.
+                """
+            )
+        }
         let participantsHint = UILabel()
         participantsHint.numberOfLines = 0
         participantsHint.translatesAutoresizingMaskIntoConstraints = false
         participantsHint.text = "Participants:"
         participantsHint.textColor = .systemGray
+        participantsHint.font = UIFontMetrics.default.scaledFont(for: customFont)
+        participantsHint.adjustsFontForContentSizeCategory = true
         return participantsHint
     }()
     
     private lazy var priceHint: UILabel = {
+        guard let customFont = UIFont(name: "REM-Regular", size: UIFont.labelFontSize) else {
+            fatalError("""
+                Failed to load the "REM-Regular" font.
+                Make sure the font file is included in the project and the font name is spelled correctly.
+                """
+            )
+        }
         let priceHint = UILabel()
         priceHint.numberOfLines = 0
         priceHint.translatesAutoresizingMaskIntoConstraints = false
         priceHint.textColor = .systemGray
         priceHint.text = "Price:"
+        priceHint.font = UIFontMetrics.default.scaledFont(for: customFont)
+        priceHint.adjustsFontForContentSizeCategory = true
         return priceHint
     }()
     
     private lazy var participantsLabel: UILabel = {
+        guard let customFont = UIFont(name: "REM-Regular", size: UIFont.labelFontSize) else {
+            fatalError("""
+                Failed to load the "REM-Regular" font.
+                Make sure the font file is included in the project and the font name is spelled correctly.
+                """
+            )
+        }
         let participantsLabel = UILabel()
         participantsLabel.translatesAutoresizingMaskIntoConstraints = false
         participantsLabel.textAlignment = .left
 //        participantsLabel.numberOfLines = 0
+        participantsLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
+        participantsLabel.adjustsFontForContentSizeCategory = true
         return participantsLabel
     }()
     
     private lazy var priceLabel: UILabel = {
+        guard let customFont = UIFont(name: "REM-Regular", size: UIFont.labelFontSize) else {
+            fatalError("""
+                Failed to load the "REM-Regular" font.
+                Make sure the font file is included in the project and the font name is spelled correctly.
+                """
+            )
+        }
         let priceLabel = UILabel()
         priceLabel.translatesAutoresizingMaskIntoConstraints = false
         priceLabel.textAlignment = .left
         priceLabel.numberOfLines = 0
+        priceLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
+        priceLabel.adjustsFontForContentSizeCategory = true
         return priceLabel
     }()
     
     private lazy var typeLabel: UILabel = {
+        guard let customFont = UIFont(name: "REM-Regular", size: UIFont.labelFontSize) else {
+            fatalError("""
+                Failed to load the "REM-Regular" font.
+                Make sure the font file is included in the project and the font name is spelled correctly.
+                """
+            )
+        }
         let typeLabel = UILabel()
         typeLabel.translatesAutoresizingMaskIntoConstraints = false
         typeLabel.textAlignment = .left
         typeLabel.numberOfLines = 0
+        typeLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
+        typeLabel.adjustsFontForContentSizeCategory = true
         return typeLabel
     }()
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02B381192A6FBE740015FD46 /* REM-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02B381182A6FBE740015FD46 /* REM-Regular.ttf */; };
 		106077732A6C58C1007FDCD3 /* ActivityResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106077722A6C58C1007FDCD3 /* ActivityResponseModel.swift */; };
 		106077752A6C5A86007FDCD3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106077742A6C5A86007FDCD3 /* NetworkManager.swift */; };
 		106077772A6C5AC4007FDCD3 /* ActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106077762A6C5AC4007FDCD3 /* ActivityManager.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02B381182A6FBE740015FD46 /* REM-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "REM-Regular.ttf"; sourceTree = "<group>"; };
 		106077722A6C58C1007FDCD3 /* ActivityResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityResponseModel.swift; sourceTree = "<group>"; };
 		106077742A6C5A86007FDCD3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		106077762A6C5AC4007FDCD3 /* ActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityManager.swift; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02B381172A6FBE4F0015FD46 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				02B381182A6FBE740015FD46 /* REM-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		1060776F2A6C5882007FDCD3 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +138,7 @@
 		10FCAD452A6C445500823E0A /* ProjectApp */ = {
 			isa = PBXGroup;
 			children = (
+				02B381172A6FBE4F0015FD46 /* Fonts */,
 				106077712A6C5898007FDCD3 /* Controllers */,
 				106077702A6C588A007FDCD3 /* DataModel */,
 				1060776F2A6C5882007FDCD3 /* View */,
@@ -213,6 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02B381192A6FBE740015FD46 /* REM-Regular.ttf in Resources */,
 				10FCAD502A6C445700823E0A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

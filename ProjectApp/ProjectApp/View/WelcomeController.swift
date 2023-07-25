@@ -16,6 +16,13 @@ class WelcomeViewController: UIViewController {
     }
 
     private func setupUI() {
+        guard let customFont = UIFont(name: "REM-Regular", size: UIFont.labelFontSize) else {
+            fatalError("""
+                Failed to load the "REM-Regular" font.
+                Make sure the font file is included in the project and the font name is spelled correctly.
+                """
+            )
+        }
         view.backgroundColor = .white
 
         let titleLabel = UILabel()
@@ -24,6 +31,8 @@ class WelcomeViewController: UIViewController {
         titleLabel.textAlignment = .center
         titleLabel.numberOfLines = 0
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
+        titleLabel.adjustsFontForContentSizeCategory = true
         view.addSubview(titleLabel)
         
         let imageView1 = UIImageView()
@@ -49,7 +58,9 @@ class WelcomeViewController: UIViewController {
 
         let getStartedButton = UIButton(type: .system)
                 getStartedButton.setTitle("Get Started", for: .normal)
-                getStartedButton.titleLabel?.font = UIFont.systemFont(ofSize: 20.0)
+                getStartedButton.titleLabel?.font = UIFontMetrics.default.scaledFont(for: customFont)
+                getStartedButton.titleLabel?.adjustsFontForContentSizeCategory = true
+                getStartedButton.titleLabel?.font.withSize(20.0)
                 getStartedButton.addTarget(self, action: #selector(getStartedButtonTapped), for: .touchUpInside)
                 getStartedButton.translatesAutoresizingMaskIntoConstraints = false
                 view.addSubview(getStartedButton)

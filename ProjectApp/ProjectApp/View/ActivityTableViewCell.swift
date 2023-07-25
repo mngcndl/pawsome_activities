@@ -16,16 +16,27 @@ final class ActivityTableViewCell: UITableViewCell {
         
 //    weak var delegate: ActivityTableViewCellDelegate?
     
+    
+    
     private lazy var activityName: UILabel = {
+        guard let customFont = UIFont(name: "REM-Regular", size: UIFont.labelFontSize) else {
+            fatalError("""
+                Failed to load the "REM-Regular" font.
+                Make sure the font file is included in the project and the font name is spelled correctly.
+                """
+            )
+        }
         let activityName = UILabel()
         activityName.numberOfLines = 0
         activityName.textAlignment = .center
+        activityName.font = UIFontMetrics.default.scaledFont(for: customFont)
+        activityName.adjustsFontForContentSizeCategory = true
         return activityName
     }()
     
     private lazy var dogImageView: UIImageView = {
         let dogImageView = UIImageView()
-        dogImageView.contentMode = .center // Set the content mode to center
+        dogImageView.contentMode = .scaleAspectFill // Set the content mode to center
         dogImageView.clipsToBounds = true
         return dogImageView
     }()
